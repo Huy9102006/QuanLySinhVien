@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyApplication</string>
+
+    <string name="title_app">QUẢN LÝ SINH VIÊN PTIT</string>
+
+    <string name="label_id">MÃ SINH VIÊN:</string>
+    <string name="label_name">HỌ TÊN:</string>
+    <string name="label_age">TUỔI:</string>
+    <string name="label_gpa">GPA:</string>
+
+    <string name="hint_id">Nhập mã sinh viên</string>
+    <string name="hint_name">Nhập họ tên</string>
+    <string name="hint_age">Nhập tuổi</string>
+    <string name="hint_gpa">Nhập GPA</string>
+
+    <string name="btn_add">Thêm sinh viên</string>
+    <string name="btn_clear">Xóa</string>
+
+    <string name="list_placeholder">Danh sách sinh viên sẽ hiển thị ở đây.</string>
+
+    <string name="error_empty_fields">Vui lòng nhập đầy đủ thông tin!</string>
+    <string name="error_age_format">Tuổi phải là số nguyên!</string>
+    <string name="error_gpa_format">GPA phải là số!</string>
+    <string name="error_age_range">Tuổi không hợp lệ!</string>
+    <string name="error_gpa_range">GPA phải trong khoảng 0 - 10!</string>
+
+    <string name="rank_gioi">Giỏi</string>
+    <string name="rank_kha">Khá</string>
+    <string name="rank_trungbinh">Trung bình</string>
+    <string name="rank_yeu">Yếu</string>
+
+    <string name="student_info_format">Mã SV: %1$s\nHọ tên: %2$s\nTuổi: %3$d\nGPA: %4$.2f\nXếp loại: %5$s</string>
+    <string name="list_separator">\n----------------------------------\n</string>
+</resources>

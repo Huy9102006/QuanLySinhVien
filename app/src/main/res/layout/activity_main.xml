@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/title_app"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Mã sinh viên -->
+    <TextView
+        android:id="@+id/tvIdLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/label_id"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <EditText
+        android:id="@+id/edtId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="username"
+        android:hint="@string/hint_id"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#616161"
+        app:layout_constraintBottom_toBottomOf="@id/tvIdLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvIdLabel"
+        app:layout_constraintTop_toTopOf="@id/tvIdLabel"
+        app:layout_constraintWidth_max="400dp" />
+
+    <!-- Họ tên -->
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_name"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIdLabel" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="name"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#616161"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvNameLabel"
+        app:layout_constraintTop_toTopOf="@id/tvNameLabel"
+        app:layout_constraintWidth_max="400dp" />
+
+    <!-- Tuổi -->
+    <TextView
+        android:id="@+id/tvAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_age"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameLabel" />
+
+    <EditText
+        android:id="@+id/edtAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:importantForAutofill="no"
+        android:hint="@string/hint_age"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#616161"
+        app:layout_constraintBottom_toBottomOf="@id/tvAgeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvAgeLabel"
+        app:layout_constraintTop_toTopOf="@id/tvAgeLabel"
+        app:layout_constraintWidth_max="400dp" />
+
+    <!-- GPA -->
+    <TextView
+        android:id="@+id/tvGpaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_gpa"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAgeLabel" />
+
+    <EditText
+        android:id="@+id/edtGpa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints=""
+        android:importantForAutofill="no"
+        android:hint="@string/hint_gpa"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#616161"
+        app:layout_constraintBottom_toBottomOf="@id/tvGpaLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvGpaLabel"
+        app:layout_constraintTop_toTopOf="@id/tvGpaLabel"
+        app:layout_constraintWidth_max="400dp" />
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:minHeight="48dp"
+        android:text="@string/btn_add"
+        app:layout_constraintEnd_toStartOf="@id/btnClear"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGpaLabel"
+        app:layout_constraintWidth_max="220dp" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        android:minHeight="48dp"
+        android:text="@string/btn_clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnAdd"
+        app:layout_constraintTop_toTopOf="@id/btnAdd"
+        app:layout_constraintWidth_max="220dp" />
+
+    <!-- Danh sách sinh viên -->
+    <ScrollView
+        android:id="@+id/scrollResult"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd">
+
+        <TextView
+            android:id="@+id/tvStudentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/list_placeholder"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
