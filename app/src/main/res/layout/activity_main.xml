@@ -20,7 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Mã sinh viên -->
     <TextView
         android:id="@+id/tvIdLabel"
         android:layout_width="wrap_content"
@@ -50,7 +49,6 @@
         app:layout_constraintTop_toTopOf="@id/tvIdLabel"
         app:layout_constraintWidth_max="400dp" />
 
-    <!-- Họ tên -->
     <TextView
         android:id="@+id/tvNameLabel"
         android:layout_width="wrap_content"
@@ -80,7 +78,6 @@
         app:layout_constraintTop_toTopOf="@id/tvNameLabel"
         app:layout_constraintWidth_max="400dp" />
 
-    <!-- Tuổi -->
     <TextView
         android:id="@+id/tvAgeLabel"
         android:layout_width="wrap_content"
@@ -111,7 +108,6 @@
         app:layout_constraintTop_toTopOf="@id/tvAgeLabel"
         app:layout_constraintWidth_max="400dp" />
 
-    <!-- GPA -->
     <TextView
         android:id="@+id/tvGpaLabel"
         android:layout_width="wrap_content"
@@ -142,7 +138,6 @@
         app:layout_constraintTop_toTopOf="@id/tvGpaLabel"
         app:layout_constraintWidth_max="400dp" />
 
-    <!-- Buttons -->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="0dp"
@@ -170,7 +165,6 @@
         app:layout_constraintTop_toTopOf="@id/btnAdd"
         app:layout_constraintWidth_max="220dp" />
 
-    <!-- Danh sách sinh viên -->
     <ScrollView
         android:id="@+id/scrollResult"
         android:layout_width="0dp"
