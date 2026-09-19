@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText edtId, edtName, edtAge, edtGpa;
     private Button btnAdd, btnClear;
     private TextView tvStudentList;
-
-    // Danh sách sinh viên - minh họa sử dụng ArrayList<Student>
     private final ArrayList<Student> studentList = new ArrayList<>();
 
     @Override
@@ -49,20 +48,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * 1. Lấy dữ liệu từ giao diện
-     * 2. Kiểm tra dữ liệu nhập vào
-     * 3. Tạo đối tượng Student
-     * 4. Thêm vào ArrayList<Student>
-     * 5. Hiển thị danh sách lên màn hình
-     */
     private void addStudent() {
         String id = edtId.getText().toString().trim();
         String name = edtName.getText().toString().trim();
         String ageStr = edtAge.getText().toString().trim();
         String gpaStr = edtGpa.getText().toString().trim();
 
-        // Kiểm tra dữ liệu nhập vào
         if (TextUtils.isEmpty(id) || TextUtils.isEmpty(name)
                 || TextUtils.isEmpty(ageStr) || TextUtils.isEmpty(gpaStr)) {
             Toast.makeText(this, getString(R.string.error_empty_fields), Toast.LENGTH_SHORT).show();
@@ -93,11 +84,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // Tạo đối tượng Student và thêm vào danh sách
         Student student = new Student(id, name, age, gpa);
         studentList.add(student);
 
-        // Hiển thị danh sách và xóa các ô nhập để nhập sinh viên tiếp theo
         renderStudentList();
         edtId.setText("");
         edtName.setText("");
@@ -106,9 +95,6 @@ public class MainActivity extends AppCompatActivity {
         edtId.requestFocus();
     }
 
-    /**
-     * Duyệt qua ArrayList<Student> và hiển thị thông tin từng sinh viên lên TextView.
-     */
     private void renderStudentList() {
         if (studentList.isEmpty()) {
             tvStudentList.setText(getString(R.string.list_placeholder));
@@ -125,9 +111,6 @@ public class MainActivity extends AppCompatActivity {
         tvStudentList.setText(sb.toString());
     }
 
-    /**
-     * Nút Xóa: xóa toàn bộ danh sách sinh viên và các ô nhập.
-     */
     private void clearAll() {
         studentList.clear();
         renderStudentList();
@@ -137,20 +120,13 @@ public class MainActivity extends AppCompatActivity {
         edtGpa.setText("");
     }
 
-    /**
-     * Lớp Student - mô hình hóa một sinh viên.
-     * Minh họa OOP: Class & Object, Encapsulation (private + Getter/Setter), Constructor.
-     * Đặt làm static inner class để gộp chung vào MainActivity.java theo yêu cầu.
-     */
     public static class Student {
 
-        // Thuộc tính private -> Encapsulation
         private String id;
         private String name;
         private int age;
         private double gpa;
 
-        // Constructor
         public Student(String id, String name, int age, double gpa) {
             this.id = id;
             this.name = name;
@@ -158,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
             this.gpa = gpa;
         }
 
-        // ----- Getter / Setter -----
         public String getId() {
             return id;
         }
@@ -191,11 +166,7 @@ public class MainActivity extends AppCompatActivity {
             this.gpa = gpa;
         }
 
-        /**
-         * Xếp loại học lực dựa trên GPA.
-         * Cần Context để lấy chuỗi xếp loại từ strings.xml.
-         */
-        public String getRank(android.content.Context context) {
+        public String getRank(Context context) {
             if (gpa >= 8.5) {
                 return context.getString(R.string.rank_gioi);
             } else if (gpa >= 7.0) {
@@ -207,10 +178,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        /**
-         * Trả về chuỗi thông tin đầy đủ của sinh viên, lấy định dạng từ strings.xml.
-         */
-        public String displayInfo(android.content.Context context) {
+        public String displayInfo(Context context) {
             return context.getString(
                     R.string.student_info_format,
                     id, name, age, gpa, getRank(context)
